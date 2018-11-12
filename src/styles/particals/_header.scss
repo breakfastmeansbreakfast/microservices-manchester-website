@@ -1,0 +1,25 @@
+.header {
+  color: $white;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background: #eee;
+
+  > div {
+    width: 100%;
+    padding: 15px 0;
+
+    @include breakpoint(sm) {
+      width: 1040px;
+    }
+
+    img {
+      height: 60px;
+
+      @include breakpoint(sm) {
+        height: 60px;
+      }
+    }
+  }
+}

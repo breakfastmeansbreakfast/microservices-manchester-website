@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:700'),
+  'modules/mixins', 'modules/colors', 'modules/fonts';
+
+html {
+  font-family: 'Source Sans Pro', sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+}
+
+@media only screen and (max-width: 480px) {
+  html {
+    font-size: 100%;
+  }
+}
+
+@import 'particals/eventItem', 'particals/avatar', 'particals/header',
+  'particals/hero';

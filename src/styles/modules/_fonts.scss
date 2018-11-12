@@ -1,0 +1,22 @@
+$font-header: 'Source Sans Pro';
+$font-body: 'Source Sans Pro';
+
+$font-header-color: $darkBlue;
+$font-body-color: $greyBlue;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: $font-header-color;
+}
+
+p,
+li,
+span {
+  color: $font-body-color;
+}

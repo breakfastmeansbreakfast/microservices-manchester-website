@@ -1,0 +1,42 @@
+.organizer {
+  display: flex;
+  align-items: center;
+
+  flex-direction: column;
+  @include breakpoint(sm) {
+    flex-direction: row;
+  }
+
+  > div {
+    width: 100%;
+
+    @include breakpoint(sm) {
+      width: auto;
+    }
+  }
+
+  .avatars {
+    display: flex;
+    flex-direction: row;
+
+    .avatar {
+      display: block;
+      border-radius: 30px;
+      width: 30px;
+      height: 30px;
+      border: 2px solid white;
+      background-size: cover;
+
+      &:not(:first-of-type) {
+        margin-left: -10px;
+      }
+    }
+  }
+
+  .names {
+    margin-left: 0px;
+    @include breakpoint(sm) {
+      margin-left: 10px;
+    }
+  }
+}
