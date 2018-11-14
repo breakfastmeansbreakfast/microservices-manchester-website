@@ -4,7 +4,7 @@ module.exports = {
   },
   mapping: {
     'MarkdownRemark.frontmatter.author': `AuthorYaml`,
-    'MarkdownRemark.frontmatter.sponsor': `SponsorYaml`,
+    'MarkdownRemark.frontmatter.sponsors': `SponsorYaml`,
     'MarkdownRemark.frontmatter.meetup': `meetupEvent.id`,
   },
   plugins: [

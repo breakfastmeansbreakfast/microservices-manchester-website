@@ -8,10 +8,12 @@ import Hero from '../components/Hero'
 import '../styles/index.scss'
 
 const IndexPage = props => {
+  console.log(props)
   const { data } = props
+  console.log(data)
   const { edges } = data.allMarkdownRemark
 
-  console.log(edges[0].node.frontmatter.meetup)
+  // console.log(edges[0].node.frontmatter.meetup)
 
   return (
     <Layout>

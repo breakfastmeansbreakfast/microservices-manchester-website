@@ -16,7 +16,7 @@ const Avatar = ({ users }) => (
           <span>
             {user.member.name}
             {i !== users.length - 1
-              ? `${users.length > 2 && i < users.length - 2 ? ' , ' : ' & '}`
+              ? `${users.length > 2 && i < users.length - 2 ? ', ' : ' & '}`
               : null}
           </span>
         )
