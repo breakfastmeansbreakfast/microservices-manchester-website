@@ -1,6 +1,9 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
+import person from '../images/person.svg'
+import clock from '../images/clock.svg'
+import location from '../images/location.svg'
 
 export default ({ data }) => {
   const { markdownRemark } = data
@@ -33,14 +36,21 @@ export default ({ data }) => {
         </div>
         <div className="page-event-information">
           <div>
-            <div>
+            <img src={clock} />
+            <p>
               {meetup.local_date} {meetup.local_time}
-            </div>
-            <div>{meetup.members.length}</div>
-            <div>
-              <span>{venue.name}</span>
-              <span>{address}</span>
-            </div>
+            </p>
+          </div>
+          <div>
+            <img src={person} />
+            <p>{meetup.members.length} people are going.</p>
+          </div>
+          <div>
+            <img src={location} />
+            <p>
+              {venue.name} <br />
+              {address}
+            </p>
           </div>
         </div>
         <div className="page-event-body">

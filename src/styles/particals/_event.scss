@@ -1,14 +1,4 @@
 .page-event {
-  // display: flex;
-  // flex-direction: row;
-  // position: relative;
-  // width: 100%;
-  //
-  // @include breakpoint(md) {
-  //   min-height: 400px;
-  //   flex-direction: column;
-  // }
-
   &-heading {
     display: flex;
     flex-direction: row;
@@ -62,6 +52,50 @@
           background-color: darkOrange;
         }
       }
+    }
+  }
+  &-information {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+
+    > div {
+      width: 100%;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: 20px;
+        height: 20px;
+        padding: 20px;
+        margin-right: 10px;
+        display: block;
+        background-color: $blue;
+        fill: white;
+        border-radius: 50%;
+      }
+
+      p {
+        margin: 0;
+      }
+
+      &:first-of-type {
+        justify-content: flex-start;
+        margin-right: 20px;
+        margin-left: 0;
+      }
+
+      &:last-of-type {
+        justify-content: flex-end;
+        margin-left: 20px;
+        margin-right: 0;
+      }
+    }
+  }
+  &-body {
+    .description {
     }
   }
 }

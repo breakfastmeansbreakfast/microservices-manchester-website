@@ -1,5 +1,7 @@
-$font-header: 'Source Sans Pro';
-$font-body: 'Source Sans Pro';
+@import url('https://fonts.googleapis.com/css?family=PT+Mono');
+
+$font-header: 'Source Sans Pro', sans-serif;
+$font-body: 'PT Mono', monospace;
 
 $font-header-color: $darkBlue;
 $font-body-color: $greyBlue;
@@ -11,12 +13,13 @@ h4,
 h5,
 h6,
 button {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: $font-header;
   color: $font-header-color;
 }
 
 p,
 li,
 span {
+  font-family: $font-body;
   color: $font-body-color;
 }
