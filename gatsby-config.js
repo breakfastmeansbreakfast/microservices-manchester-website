@@ -3,7 +3,7 @@ module.exports = {
     title: 'Gatsby Default Starter',
   },
   mapping: {
-    'MarkdownRemark.frontmatter.author': `AuthorYaml`,
+    'MarkdownRemark.frontmatter.speakers': `AuthorYaml`,
     'MarkdownRemark.frontmatter.sponsors': `SponsorYaml`,
     'MarkdownRemark.frontmatter.meetup': `meetupEvent.id`,
   },

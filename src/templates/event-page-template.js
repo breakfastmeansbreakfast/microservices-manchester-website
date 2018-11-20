@@ -7,7 +7,7 @@ import location from '../images/location.svg'
 
 export default ({ data }) => {
   const { markdownRemark } = data
-  const { meetup } = markdownRemark.frontmatter
+  const { meetup, sponsors, speaker } = markdownRemark.frontmatter
   const { venue } = meetup
   let address = ''
   const _address = (({ address_1, address_2, city }) => ({
@@ -57,8 +57,16 @@ export default ({ data }) => {
           <div className="description">
             <div dangerouslySetInnerHTML={{ __html: markdownRemark.html }} />
           </div>
-          <div className="sponsers" />
-          <div className="speakers" />
+          <div className="sponsers">
+            {sponsors.map(sponser => (
+              <div>{sponser.id}</div>
+            ))}
+          </div>
+          <div className="speakers">
+            {speakers.map(speaker => (
+              <div>{speaker.id}</div>
+            ))}
+          </div>
         </div>
       </div>
     </Layout>
@@ -71,6 +79,13 @@ export const query = graphql`
       html
       frontmatter {
         title
+        speakers {
+          id
+        }
+        sponsors {
+          id
+          awesome
+        }
         meetup {
           name
           local_date
