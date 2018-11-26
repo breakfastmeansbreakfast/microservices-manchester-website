@@ -4,6 +4,8 @@ sponsors:
   - Liverpool FC
   - Liverpool FC
   - Liverpool FC
+speakers:
+  - Ersel
 ---
 
 Hi everyone,

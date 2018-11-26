@@ -1,13 +1,15 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
+import Sponsers from '../components/Sponsers'
+import Speakers from '../components/Speakers'
 import person from '../images/person.svg'
 import clock from '../images/clock.svg'
 import location from '../images/location.svg'
 
 export default ({ data }) => {
   const { markdownRemark } = data
-  const { meetup, sponsors, speaker } = markdownRemark.frontmatter
+  const { meetup, sponsors, speakers } = markdownRemark.frontmatter
   const { venue } = meetup
   let address = ''
   const _address = (({ address_1, address_2, city }) => ({
@@ -53,21 +55,13 @@ export default ({ data }) => {
             </p>
           </div>
         </div>
+        <Speakers speakers={speakers} />
         <div className="page-event-body">
           <div className="description">
             <div dangerouslySetInnerHTML={{ __html: markdownRemark.html }} />
           </div>
-          <div className="sponsers">
-            {sponsors.map(sponser => (
-              <div>{sponser.id}</div>
-            ))}
-          </div>
-          <div className="speakers">
-            {speakers.map(speaker => (
-              <div>{speaker.id}</div>
-            ))}
-          </div>
         </div>
+        <Sponsers sponsers={sponsors} />
       </div>
     </Layout>
   )
@@ -79,12 +73,16 @@ export const query = graphql`
       html
       frontmatter {
         title
-        speakers {
-          id
-        }
         sponsors {
           id
-          awesome
+          image
+          website
+        }
+        speakers {
+          id
+          twitter
+          bio
+          avatar
         }
         meetup {
           name
@@ -107,3 +105,11 @@ export const query = graphql`
     }
   }
 `
+
+{
+  /* <div className="speakers">
+  {speakers.map(speaker => (
+    <div>{speaker.id}</div>
+  ))}
+</div> */
+}

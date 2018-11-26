@@ -17,7 +17,6 @@ const IndexPage = props => {
 
   return (
     <Layout>
-      <Hero />
       <div className="event-wrapper">
         {edges.map(({ node }) => (
           <Event path={node.fields.slug} meetup={node.frontmatter.meetup} />

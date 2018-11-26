@@ -1,4 +1,6 @@
 - id: Liverpool FC
-  awesome: yes
-  website: www.google.nl
-  main: true
+  image: https://upload.wikimedia.org/wikipedia/hif/b/bd/Liverpool_FC.png
+  website: https://www.google.nl
+- id: Everton FC
+  image: https://upload.wikimedia.org/wikipedia/en/thumb/7/7c/Everton_FC_logo.svg/220px-Everton_FC_logo.svg.png
+  website: https://www.google.nl

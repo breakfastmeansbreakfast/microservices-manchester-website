@@ -6,6 +6,11 @@ $font-body: 'PT Mono', monospace;
 $font-header-color: $darkBlue;
 $font-body-color: $greyBlue;
 
+%header {
+  font-family: $font-header;
+  color: $font-header-color;
+}
+
 h1,
 h2,
 h3,

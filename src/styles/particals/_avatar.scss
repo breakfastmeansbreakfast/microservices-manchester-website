@@ -35,6 +35,9 @@
 
   .names {
     margin-left: 0px;
+    > * {
+      @extend %header;
+    }
     @include breakpoint(sm) {
       margin-left: 10px;
     }

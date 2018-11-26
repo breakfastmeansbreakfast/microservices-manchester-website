@@ -79,6 +79,8 @@
 
       p {
         margin: 0;
+        font-size: 13px;
+        @extend %header;
       }
 
       &:first-of-type {
