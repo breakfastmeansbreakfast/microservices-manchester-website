@@ -3,9 +3,9 @@ import SpeakersItem from '../SpeakersItem'
 
 const Speakers = ({ speakers }) => (
   <div className="speakers">
-    <h3>Speakers</h3>
+    {speakers.length > 1 ? <h3>Speakers</h3> : <h3>Speaker</h3>}
 
-    <div className="item-wrapper">
+    <div speakers-lenght={speakers.length} className="item-wrapper">
       {speakers.map(speaker => (
         <SpeakersItem speaker={speaker} />
       ))}

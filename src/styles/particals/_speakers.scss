@@ -1,34 +1,88 @@
 .speakers {
+  margin: 50px 0;
+
+  > h3 {
+    font-size: 50px;
+    margin: 0 0 40px;
+  }
   .item-wrapper {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &[speakers-lenght='3'] {
+      .speaker-item {
+        flex-direction: column;
+        width: calc(33% - 20px);
+      }
+    }
+
+    &[speakers-lenght='2'] {
+      .speaker-item {
+        flex-direction: column;
+        width: calc(50% - 20px);
+      }
+    }
+
+    &[speakers-lenght='1'] {
+      .speaker-item {
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+
+        .heading {
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          margin-right: 50px;
+
+          img {
+            margin-right: 0;
+            height: 150px;
+          }
+        }
+      }
+    }
 
     .speaker-item {
-      flex: 0 0 50%;
       box-sizing: border-box;
-      align-items: center;
       display: flex;
-      width: 50%;
-      padding: 50px 25px;
+      flex-direction: column;
+      padding: 30px;
+      background-color: $orange;
+      box-shadow: 0 0px 28px rgba(0, 0, 0, 0.25),
+        0 10px 10px rgba(0, 0, 0, 0.22);
+
+      .heading {
+        display: flex;
+        align-items: center;
+      }
+
+      .info {
+      }
 
       a {
         text-decoration: none;
+        color: white;
+      }
+
+      p {
+        color: white;
       }
 
       h3 {
-        text-align: center;
-      }
-
-      &:hover {
+        color: white;
+        margin: 0;
+        font-size: 1.5em;
       }
 
       img {
         transition: all 0.4s ease;
         margin-right: 30px;
         display: block;
-        height: 150px;
+        height: 75px;
         border-radius: 50%;
+        // box-shadow: 7px 7px #b8b8b8;
       }
     }
   }

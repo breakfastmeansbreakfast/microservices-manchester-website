@@ -33,6 +33,9 @@ export default ({ data }) => {
           <div className="detail">
             <div className="info">
               <h2>{meetup.name}</h2>
+              <a href={meetup.link} className="button meetup">
+                Meetup
+              </a>
             </div>
           </div>
         </div>
@@ -57,6 +60,7 @@ export default ({ data }) => {
         </div>
         <Speakers speakers={speakers} />
         <div className="page-event-body">
+          <h3>Detail</h3>
           <div className="description">
             <div dangerouslySetInnerHTML={{ __html: markdownRemark.html }} />
           </div>
@@ -80,7 +84,7 @@ export const query = graphql`
         }
         speakers {
           id
-          twitter
+          linkedin
           bio
           avatar
         }
@@ -88,6 +92,7 @@ export const query = graphql`
           name
           local_date
           local_time
+          link
           venue {
             name
             address_1
