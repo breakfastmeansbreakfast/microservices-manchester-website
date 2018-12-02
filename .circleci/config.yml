@@ -18,3 +18,11 @@ jobs:
       - run: git config --global user.email "hello@erselaker.com"
       - run: git config --global user.name "Ersel Aker"
       - run: yarn deploy
+workflows:
+  version: 2
+  deploy:
+    jobs:
+      - build:
+          filters:
+            branches:
+              only: master
