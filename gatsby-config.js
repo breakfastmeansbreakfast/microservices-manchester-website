@@ -1,5 +1,5 @@
 module.exports = {
-  pathPrefix: "/microservices-manchester-website",
+  pathPrefix: "/",
   siteMetadata: {
     title: 'Microservices Manchester Meetup',
   },
