@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: "/microservices-manchester-website",
   siteMetadata: {
     title: 'Gatsby Default Starter',
   },
