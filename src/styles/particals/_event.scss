@@ -4,35 +4,43 @@
   }
   &-heading {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     position: relative;
     width: 100%;
-    margin-top: 50px;
 
     @include breakpoint(md) {
       margin-top: 100px;
       min-height: 400px;
+      margin-top: 50px;
       flex-direction: row;
     }
     .image {
       justify-content: space-between;
       flex: 2;
+      height: 300px;
       position: relative;
       z-index: 2;
-      margin-right: 7px;
-      margin-top: 7px;
+
       background: url('https://secure.meetupstatic.com/photos/event/1/e/b/6/highres_475267862.jpeg')
         no-repeat;
       background-size: cover;
       overflow: hidden;
-      box-shadow: 7px 7px #b8b8b8;
+
+      @include breakpoint(md) {
+        height: auto;
+        box-shadow: 7px 7px #b8b8b8;
+        margin-right: 7px;
+        margin-top: 7px;
+      }
     }
     .detail {
       display: flex;
       flex-direction: column;
       justify-content: center;
       flex: 1;
-      margin: 20px 0 20px 40px;
+      @include breakpoint(md) {
+        margin: 20px 0 20px 40px;
+      }
       .info {
         box-sizing: border-box;
         padding: 20px;
@@ -66,7 +74,13 @@
   &-information {
     display: flex;
     justify-content: space-between;
-    margin-top: 25px;
+    flex-direction: column;
+    margin: 0px 30px 0;
+
+    @include breakpoint(md) {
+      flex-direction: row;
+      margin: 30px 0;
+    }
 
     > div {
       width: 100%;
@@ -74,6 +88,12 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      justify-content: flex-start;
+      margin-top: 25px;
+
+      @include breakpoint(md) {
+        margin-top: 0;
+      }
 
       img {
         width: 20px;
@@ -93,22 +113,33 @@
       }
 
       &:first-of-type {
-        justify-content: flex-start;
-        margin-right: 20px;
         margin-left: 0;
+
+        @include breakpoint(md) {
+          margin-right: 20px;
+          justify-content: flex-start;
+        }
       }
 
       &:last-of-type {
-        justify-content: flex-end;
-        margin-left: 20px;
         margin-right: 0;
+
+        @include breakpoint(md) {
+          margin-left: 20px;
+          justify-content: flex-end;
+        }
       }
     }
   }
   &-body {
     > h3 {
       font-size: 50px;
-      margin: 0 0 40px;
+
+      margin: 0 30px 40px;
+
+      @include breakpoint(md) {
+        margin: 0 0 40px;
+      }
     }
     .description {
       background: #eee;

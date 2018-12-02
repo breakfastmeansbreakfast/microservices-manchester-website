@@ -3,12 +3,23 @@
 
   > h3 {
     font-size: 50px;
-    margin: 0 0 40px;
+    margin: 0 30px 40px;
+
+    @include breakpoint(md) {
+      margin: 0 0 40px;
+    }
   }
   .item-wrapper {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+    flex-direction: column;
+    justify-content: center;
+
+    @include breakpoint(md) {
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+
     .sponser-item {
       flex: 0 0 33.3%;
       box-sizing: border-box;

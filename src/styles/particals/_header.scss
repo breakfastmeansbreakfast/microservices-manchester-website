@@ -9,16 +9,20 @@
   > div {
     width: 100%;
     padding: 15px 0;
+    margin: 0 30px;
 
-    @include breakpoint(sm) {
-      width: 1040px;
+    @include breakpoint(md) {
+      max-width: 960px;
     }
 
     img {
-      height: 60px;
+      width: 75%;
+      height: auto;
 
-      @include breakpoint(sm) {
+      @include breakpoint(md) {
         height: 60px;
+        width: auto;
+        margin: 0 30px;
       }
     }
   }
