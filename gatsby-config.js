@@ -1,7 +1,7 @@
 module.exports = {
   pathPrefix: "/microservices-manchester-website",
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: 'Microservices Manchester Meetup',
   },
   mapping: {
     'MarkdownRemark.frontmatter.speakers': `AuthorYaml`,
